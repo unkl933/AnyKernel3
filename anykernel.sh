@@ -5,15 +5,10 @@
 # begin properties
 properties() { '
 kernel.string=FloppyKernel by JonasCardoso @ xda-developers
-do.devicecheck=0
+do.devicecheck=1
 do.modules=0
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=
-device.name2=
-device.name3=
-device.name4=
-device.name5=
 supported.versions=
 supported.patchlevels=
 '; } # end properties
