@@ -33,6 +33,15 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 ## AnyKernel install
 dump_boot;
 
+
+# add floppy script
+mount -o rw,remount -t auto /vendor > /dev/null;
+mount -o rw,remount -t auto /system > /dev/null;
+insert_line /vendor/etc/init/hw/init.qcom.rc "import /vendor/etc/init/hw/init.floppy.rc" before "import /vendor/etc/init/hw/init.qcom.power.rc" "import /vendor/etc/init/hw/init.floppy.rc";
+cp -a /tmp/anykernel/patch/* /vendor/etc/init/hw/
+set_perm_recursive 0 0 755 644 /vendor/etc/init/hw/*;
+
+
 # begin ramdisk changes
 
 # end ramdisk changes
