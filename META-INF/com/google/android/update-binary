@@ -413,7 +413,7 @@ releasewithbar="$(file_getprop /tmp/anykernel/device.prop releasewithbar)"
 ToolchainName="$(file_getprop /tmp/anykernel/device.prop ToolchainName)"
 romversion="$(file_getprop /tmp/anykernel/device.prop romversion)"
 
-ui_print "You device are ${devicename}";
+ui_print "Your device is ${devicename}";
 ui_print "You are installing ${customkernelname} for ${androidversion}";
 ui_print "The date of this version is ${releasewithbar}";
 ui_print "This kernel is compiled by ${ToolchainName} toolchain";
