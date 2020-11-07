@@ -425,11 +425,12 @@ ui_print "You are installing ${romversion} version";
 ui_print " ";
 ui_print " ";
 ui_print "============================================";
-ui_print "                FLOPPY KERNEL               ";
+ui_print "              Barokah HMP A11              ";
 ui_print "============================================";
 ui_print " ";
 ui_print " ";
 ui_print " ";
+ui_print " Don't Be Evil ";
 maintainer="$(file_getprop /tmp/anykernel/device.prop maintainer)"
 ui_print "by $maintainer";
 ui_print " ";
