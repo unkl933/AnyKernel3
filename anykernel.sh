@@ -4,12 +4,13 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=FloppyKernel by JonasCardoso @ xda-developers
+kernel.string=Barokah by unkl
 do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
+device.name1=gemini
 supported.versions=
 supported.patchlevels=
 '; } # end properties
@@ -38,7 +39,7 @@ dump_boot;
 # add floppy script
 mount -o rw,remount -t auto /vendor > /dev/null;
 mount -o rw,remount -t auto /system > /dev/null;
-insert_line /vendor/etc/init/hw/init.qcom.rc "import /vendor/etc/init/hw/init.floppy.rc" before "import /vendor/etc/init/hw/init.qcom.power.rc" "import /vendor/etc/init/hw/init.floppy.rc";
+insert_line /vendor/etc/init/hw/init.qcom.rc "import /vendor/etc/init/hw/init.unkl.rc" before "import /vendor/etc/init/hw/init.qcom.power.rc" "import /vendor/etc/init/hw/init.unkl.rc";
 cp -a /tmp/anykernel/patch/* /vendor/etc/init/hw/
 set_perm_recursive 0 0 755 644 /vendor/etc/init/hw/*;
 
